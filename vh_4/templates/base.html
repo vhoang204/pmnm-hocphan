@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}LibraryMS{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        nav { background: #2c3e50; padding: 12px; margin-bottom: 20px; border-radius: 4px; }
+        nav a { color: white; text-decoration: none; margin-right: 15px; font-weight: bold; }
+        table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .filter-bar { margin-bottom: 15px; }
+        .filter-bar a { text-decoration: none; padding: 5px 10px; background: #e0e0e0; color: #333; border-radius: 3px; margin-right: 5px; }
+        .filter-bar a.active { background: #3498db; color: white; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Trang Chủ</a>
+        <a href="{{ url_for('books_list') }}">Danh Sách Sách</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

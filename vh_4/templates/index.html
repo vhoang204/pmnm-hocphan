@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Trang Chủ - LibraryMS{% endblock %}
+{% block content %}
+    <h1>Thống Kê Thư Viện (LibraryMS v0.1)</h1>
+    <ul>
+        <li>Tổng số đầu sách: <strong>{{ total }}</strong></li>
+        <li>Số sách sẵn sàng cho mượn: <strong>{{ available }}</strong></li>
+    </ul>
+{% endblock %}
