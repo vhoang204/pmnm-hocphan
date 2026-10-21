@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+<!-- Thử nghiệm: Viết <h1> này ngoài block sẽ KHÔNG hiển thị trên trang web -->
+<h1>Dòng này nằm ngoài block nên sẽ bị Jinja2 bỏ qua</h1>
+
+{% block title %}Liên hệ{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm border-0 rounded-4 p-4">
+    <h2 class="text-primary mb-3">Thông Tin Liên Hệ</h2>
+    <ul class="list-group list-group-flush fs-5">
+        <li class="list-group-item"><strong>Tên quán:</strong> Cà phê {{ shop.name }}</li>
+        <li class="list-group-item"><strong>Địa chỉ:</strong> {{ shop.address }}</li>
+        <li class="list-group-item"><strong>Điện thoại:</strong> {{ shop.phone }}</li>
+    </ul>
+</div>
+{% endblock %}

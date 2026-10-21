@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Trang chủ{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm border-0 rounded-4 p-4 text-center">
+    <h1 class="text-primary fw-bold">Chào mừng đến với Cà phê {{ shop.name }}</h1>
+    <p class="lead">Thưởng thức hương vị cà phê đích thực tại thành phố Huế.</p>
+    <a href="/menu" class="btn btn-primary btn-lg mt-3">Xem Thực Đơn</a>
+</div>
+{% endblock %}

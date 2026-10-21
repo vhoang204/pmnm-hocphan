@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% from "_macros.html" import item_card, pagination %}
+
+{% block title %}Thực đơn - {{ shop.name }}{% endblock %}
+
+{% block content %}
+<div class="py-2">
+    <h3 class="fw-bold mb-4 text-center">Danh Sách Thực Đơn</h3>
+
+    <!-- Danh sách thẻ món (3 món / trang) -->
+    <div class="row">
+        {% for item in items %}
+            {{ item_card(item) }}
+        {% endfor %}
+    </div>
+
+    <!-- Thanh phân trang -->
+    {{ pagination(page, pages, 'show_menu') }}
+</div>
+{% endblock %}
